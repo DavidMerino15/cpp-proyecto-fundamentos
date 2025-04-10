@@ -3,5 +3,6 @@
 void main ()
 {
   cout<<"hola como estas ";
+  cout<<"Ahi , ajando pepita xd";
 getch();
 }
