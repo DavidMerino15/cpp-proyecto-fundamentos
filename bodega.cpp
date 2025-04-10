@@ -3,6 +3,6 @@
 void main ()
 {
   cout<<"hola como estas ";
-  cout<<"Ahi , ajando pepita xd";
+  cout<<"Ahi , bajando pepita xd";
 getch();
 }
