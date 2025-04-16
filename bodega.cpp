@@ -3,10 +3,72 @@
 using namespace std;
 int main(){
 int eleccion;
+struct Producto{
+	string nombre;
+	string tipo;
+	int cantidad;
+	
+};
+struct Proveedor{
+string nombre;      
+string direccion;   
+string telefono;    
+string correo;      
+string categoria; 	
+};
+struct Cliente{	
+double dni;
+string nombre;       
+string direccion;    
+string telefono;     
+string correo;
+};
 
 
 
 
+//FUNCIONES DEL PROGRAMA
+//Funcion 1
+void VisualizarProductos(Producto productos[]){
+	
+cout<<"Los productos registrados son: "<<endl;	
+for(i=0;i<=productos[];i++)	{
+cout<<i<<". "<<"Nombre: "<<productos[i].nombre
+    <<", Tipo: "<<productos[i].tipo
+    <<", Cantidad: "<<productos[i].cantidad<<endl;	
+}
+		
+}
+
+//Funcion 2
+
+//Funcion 3
+
+//Funcion 4
+
+//Funcion 5
+void VisualizarProveedores(Provedor proveedores[]){
+	
+cout<<"El registro de proveedores es: "<<endl;	
+for(i=0;i<=proveedores[];i++)	{
+
+}
+		
+}
+//Funcion 6
+void VisualizarClientes(Cliente clientes[]){
+	
+cout<<"El registro de clientes es: "<<endl;	
+for(i=0;i<=clientes[];i++)	{
+	
+}
+		
+}
+
+
+
+
+//Fin DE FUNCIONES
 
 ///MENU DEL PROYECTO DE FUNDAMENTOS
 cout<<"     MENU     "<<endl;
