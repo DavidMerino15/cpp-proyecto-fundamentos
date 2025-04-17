@@ -1,5 +1,6 @@
 #include<iostream>
 #include<conio.h>
+#include <fstream> //LIBRERIA PARA PODER CREAR TXT
 using namespace std;
 
 
