@@ -1,8 +1,9 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
-int main(){
-int eleccion;
+
+
+//ESTRUCTURAS
 struct Producto{
 	string nombre;
 	string tipo;
@@ -23,6 +24,13 @@ string direccion;
 string telefono;     
 string correo;
 };
+//FUNCIONES
+void VisualizarProductos(Producto productos[], int cantidadProductos);
+void VisualizarProveedores(Proveedor proveedores[], int cantidadProveedores);
+void VisualizarClientes(Cliente clientes[], int cantidadClientes);
+
+int main(){
+int eleccion;
 
 
 
