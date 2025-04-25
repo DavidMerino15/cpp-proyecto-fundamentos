@@ -4,31 +4,39 @@
 using namespace std;
 
 
-//ESTRUCTURAS
+//ESTRUCTURAS(son todos las variables que usaremos xd)
 struct Producto{
-	string nombre;
-	string tipo;
-	int cantidad;
-	
+double ID;
+string descripcion;
+string Nombre;
+string Categoria;
+double Precio;
+int Stock;
+double (ID)Proveedor;	
 };
 struct Proveedor{
-string nombre;      
-string direccion;   
-string telefono;    
-string correo;      
-string categoria; 	
+double ID;
+string Nombre;
+double Teléfono;
+string Correo;
+string Direccion;	
 };
 struct Cliente{	
-double dni;
+double ID(dni);
 string nombre;       
 string direccion;    
 string telefono;     
 string correo;
 };
-//FUNCIONES
-void VisualizarProductos(Producto productos[], int cantidadProductos);
-void VisualizarProveedores(Proveedor proveedores[], int cantidadProveedores);
-void VisualizarClientes(Cliente clientes[], int cantidadClientes);
+
+//Vectores(Son para almacenar los datos, luego los guardaremos en el txt)
+vector<Producto> productos;
+vector<Proveedor>& proveedores;
+vector<Cliente>& clientes;
+//FUNCIONES(solo para saber ue funciones vamos a usar)
+void visualizarProductos(vector<Producto>& productos);
+void visualizarProveedores(vector<Proveedor>& proveedores);
+void visualizarClientes(vector<Cliente>& clientes);
 
 int main(){
 int eleccion;
@@ -38,8 +46,7 @@ int eleccion;
 
 //FUNCIONES DEL PROGRAMA
 //Funcion 1
-void VisualizarProductos(Producto productos[]){
-	
+void visualizarProductos(vector<Producto>& productos){
 cout<<"Los productos registrados son: "<<endl;	
 for(i=0;i<=productos[];i++)	{
 cout<<i<<". "<<"Nombre: "<<productos[i].nombre
@@ -49,6 +56,7 @@ cout<<i<<". "<<"Nombre: "<<productos[i].nombre
 		
 }
 
+
 //Funcion 2
 
 //Funcion 3
@@ -56,16 +64,16 @@ cout<<i<<". "<<"Nombre: "<<productos[i].nombre
 //Funcion 4
 
 //Funcion 5
-void VisualizarProveedores(Provedor proveedores[]){
+void visualizarProveedores(vector<Proveedor>& proveedores){
 	
 cout<<"El registro de proveedores es: "<<endl;	
 for(i=0;i<=proveedores[];i++)	{
 
 }
 		
-}
+
 //Funcion 6
-void VisualizarClientes(Cliente clientes[]){
+void visualizarClientes(vector<Cliente>& clientes){
 	
 cout<<"El registro de clientes es: "<<endl;	
 for(i=0;i<=clientes[];i++)	{
@@ -89,12 +97,19 @@ cout<<"5.Registro de proveedores"<<endl;
 cout<<"6.Registro de clientes"<<endl;
 cout<<"Introduce el numeroo de tu eleccion: ";cin>>eleccion;
 switch(eleccion){
-case 1:cout<<"Visualizar productos"<<endl;break;
-case 2:cout<<"Agregar productos"<<endl;break;	
+case 1:cout<<"Visualizar productos"<<endl;
+       visualizarProductos(productos);
+break;
+case 2:cout<<"Agregar productos"<<endl;
+break;	
 case 3:cout<<"Editar productos"<<endl;break;	
 case 4:cout<<"Eliminar productos"<<endl;break;	
-case 5:cout<<"Registro de proveedores"<<endl;break;	
-case 6:cout<<"Registro de clientes"<<endl;break;	
+case 5:cout<<"Registro de proveedores"<<endl;
+      visualizarProveedores(proveedores);
+break;	
+case 6:cout<<"Registro de clientes"<<endl;
+      visualizarClientes(clientes);
+break;	
 default:cout<<"OPCION NO VALIDA"; break;
 }
 //FIN DEL MENU
