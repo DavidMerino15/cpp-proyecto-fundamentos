@@ -29,6 +29,32 @@ string telefono;
 string correo;
 };
 
+//Restricciones
+//PRODUCTO
+bool IDValido = (ID > 0) && (ID < 99999999);
+bool descripcionValida = !descripcion.empty();
+bool nombreValido = !Nombre.empty();
+bool categoriaValida = !Categoria.empty();
+bool precioValido = (Precio > 0) && (Precio < 99999999);
+bool stockValido = (Stock >= 0);
+bool IDProveedorValido = (IDProveedor > 0) && (IDProveedor < 99999999);
+//PROVEEDOR
+bool IDProveedorValido = (ID > 0) && (ID < 99999999);
+bool nombreProveedorValido = !Nombre.empty();
+bool telefonoProveedorValido = (Telefono > 0) && (Telefono < 99999999); 
+bool correoProveedorValido = !Correo.empty();
+bool direccionProveedorValida = !Direccion.empty();
+//CLIENTE
+bool IDClienteValido = (ID > 0) && (ID < 99999999);
+bool nombreClienteValido = !nombre.empty();
+bool direccionClienteValida = !direccion.empty();
+bool telefonoClienteValido = !telefono.empty();
+bool correoClienteValido = !correo.empty();
+
+
+
+
+
 //Vectores(Son para almacenar los datos, luego los guardaremos en el txt)
 vector<Producto> productos;
 vector<Proveedor>& proveedores;
