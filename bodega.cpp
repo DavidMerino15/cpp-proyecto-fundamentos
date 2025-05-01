@@ -32,7 +32,7 @@ string correo;
 //Restricciones
 //PRODUCTO
 bool IDValido = (ID > 0) && (ID < 99999999);
-bool descripcionValida = !descripcion.empty();
+bool descripcionValida = !descripcion.empty();//El empty verifica si existe la informacion(valor) o no
 bool nombreValido = !Nombre.empty();
 bool categoriaValida = !Categoria.empty();
 bool precioValido = (Precio > 0) && (Precio < 99999999);
