@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int eleccion;
+    string Nombre = "";
+    string Descripcion = "";
+    string Categoria = "";
+    double Precio = 0;
+    int Stock = 0;
+    bool productoRegistrado = false;
+
+    cout << "\n----- MENU -----" << endl;
+    cout << "1.Agregar producto" << endl;
+    cout << "2. Salir" << endl;
+    cout << "Introduce el numero de tu eleccion: ";
+    cin >> eleccion;
+    if(eleccion == 1) {
+        cin.ignore(); // Limpiar buffer
+        cout << "\n--- Registro de Producto ---" << endl;
+        cout << "Introduce el nombre del producto: ";
+        getline(cin,Nombre);
+
+        cout << "Introduce la descripcion: ";
+        getline(cin,Descripcion);
+
+        cout << "Introduce la categoria: ";
+        getline(cin,Categoria);
+
+        cout << "Introduce el precio: ";
+        cin >> Precio;
+
+        cout << "Introduce el stock: ";
+        cin >> Stock;
+        cin.ignore(); // Limpiar buffer
+
+        productoRegistrado = true;
+        cout << "Producto registrado con exito." << endl;
+                if (productoRegistrado) {
+            cout << "\n--- Producto Registrado ---" << endl;
+            cout << "Nombre: " << Nombre << endl;
+            cout << "Descripcion: " << Descripcion << endl;
+            cout << "Categoria: " << Categoria << endl;
+            cout << "Precio: " << Precio << endl;
+            cout << "Stock: " << Stock << endl;
+            
+        } else {
+            cout << "No hay producto registrado." << endl;
+        }
+    } else if (eleccion == 2) {
+        cout << "Saliendo del programa..." << endl;
+    } else {
+        cout << "Opcion no valida." << endl;
+    }
+
+    return 0;
+}
